@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ImageBackground, Text ,StyleSheet } from 'react-native'
 import Forecast from './Forecast'
 
@@ -9,6 +9,27 @@ export default function Weather(props){
         description: '-',
         temp: 0
     })
+    
+
+    useEffect(() => {
+        console.log(`fetching data with zipCode = ${props.zipCode}`)
+        if (props.zipCode) {
+            fetch(`http://api.openweathermap.org/data/2.5/weather?q=${props.zipCode},th&units=metric&APPID=ef95a8a6c855642773cd1cd54373a6f6`)
+            .then((response) => response.json())
+            .then((json) => {
+                setForecastInfo({
+                    main: json.weather[0].main,
+                    description: json.weather[0].description,
+                    temp: json.main.temp});
+                })
+            .catch((error) => {
+                console.warn(error);
+          });
+        }
+    }, [props.zipCode])
+       
+       
+    
 
     return (
         <ImageBackground source={require('../jisoo.jpg')} style={styles.backdrop}>
