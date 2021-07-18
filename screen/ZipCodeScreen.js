@@ -63,12 +63,14 @@ const styles = StyleSheet.create({
         flex: 1,
         fontSize: 25,
         color: 'blue',
+        textAlign: 'center',
 
     },
     zipCode: {
         flex: 1,
         fontSize: 25,
         color: 'blue',
-    
+        textAlign: 'center',
+        
     }
 })
