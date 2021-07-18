@@ -50,7 +50,8 @@ const styles = StyleSheet.create({
    zipItem: {
         flex: 1,   
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        paddingBottom: 60
 
 
      
