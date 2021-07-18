@@ -8,6 +8,7 @@ export default function Forecast(props){
             <Text style={styles.innerText}>{props.description}</Text>
             <Text style={styles.innerText}>{props.temp} °C</Text>
         </View>
+        
     )
 }
 const styles = StyleSheet.create({
@@ -29,5 +30,5 @@ const styles = StyleSheet.create({
         textShadowRadius: 10,
         textShadowColor:'black',
     },
-
+ 
    });
