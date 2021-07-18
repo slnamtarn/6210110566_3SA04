@@ -32,7 +32,7 @@ export default function Weather(props){
     
 
     return (
-        <ImageBackground source={require('../jisoo.jpg')} style={styles.backdrop}>
+        <ImageBackground source={require('../sky.jpg')} style={styles.backdrop}>
             <Text>Zip Code</Text>
             <Text>{props.zipCode}</Text>
             <Forecast {...forecastInfo}/>
