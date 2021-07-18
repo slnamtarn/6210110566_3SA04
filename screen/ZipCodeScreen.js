@@ -20,9 +20,9 @@ const availableZipItems = [
 const ZipItem = ({place, code, navigation}) => (
     <TouchableHighlight onPress={() => 
     {navigation.navigate('Weather', {zipCode: code})}}>
-        <View style ={styles.zipItem}>
-            <Text>{place}</Text>
-            <Text>{code}</Text>
+        <View style={styles.zipItem}>
+            <Text style={styles.zipPlace}>{place}</Text>
+            <Text style={styles.zipCode}>{code}</Text>
         </View>
     </TouchableHighlight>
 )
@@ -52,15 +52,23 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingBottom: 60
+        
 
 
      
     },
     zipPlace: {
+        
+    
         flex: 1,
+        fontSize: 25,
+        color: 'blue',
+
     },
     zipCode: {
         flex: 1,
+        fontSize: 25,
+        color: 'blue',
     
     }
 })
